@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Java Script Conversion</title>
+  <link rel='stylesheet' href='konberterscript.css'/>
+</head>
+<body>
+  <div class="container">
+    <h1 class="heading">Ounces to Grams</h1>
+    <form>
+      <label for="ounces">Ounces</label>
+      <input type="text" step="0.01" name="ounces" id="ounces" required minlength="2" maxlength="10" ><br><br>
+      <input type="reset">
+
+      <button type="button" id="convertButton" class="button" value="Convert" onclick="convertMe()">Convert</button>
+      <p id="result"></p>
+      <input type="number" id="grams" value="" disabled="">
+    </form>
+    <script src="konberterscript.js"> </script>
+  </div>
+</body>
+</html>
