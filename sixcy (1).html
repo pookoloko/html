@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Invitation</title>
+    <style>
+        .invitation {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        #no-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ff69b4;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        #yes-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ff69b4;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="invitation">
+        <h1>Wanna fuck?</h1>
+        <button id="no-button" onclick="moveNoButton()">No</button>
+        <button id="yes-button" style="display: none;" onclick="alert('Yay! I\'m so happy you said yes!')">Yes</button>
+    </div>
+
+    <script>
+        let noButtonPosition = 0;
+        let noButtonClicks = 0;
+        const positions = [
+            { top: '20%', left: '30%' },
+            { top: '40%', left: '50%' },
+            { top: '60%', left: '70%' },
+            { top: '10%', left: '40%' },
+            { top: '80%', left: '20%' },
+            { top: '50%', left: '10%' },
+            { top: '30%', left: '60%' },
+            { top: '70%', left: '80%' },
+            // Add more positions as needed
+        ];
+
+        function moveNoButton() {
+            noButtonClicks++;
+            noButtonPosition++;
+            const noButton = document.getElementById('no-button');
+            const yesButton = document.getElementById('yes-button');
+
+            if (noButtonPosition >= positions.length) {
+                noButtonPosition = 0;
+            }
+
+            noButton.style.top = positions[noButtonPosition].top;
+            noButton.style.left = positions[noButtonPosition].left;
+
+            if (noButtonClicks >= 3) { // Show yes button after 3 no clicks
+                yesButton.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
