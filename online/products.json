@@ -2,13 +2,13 @@
     {
         "name": "Nike Air Max 270",
         "description": "A stylish sneaker with a large air unit for maximum comfort.",
-        "image": "/online/a.jpeg",
+        "image": "a.jpeg",
         "price": 150.00
     },
     {
         "name": "Adidas Ultraboost 21",
         "description": "High-performance running shoes with responsive cushioning.",
-        "image": "/online/b.jpg",
+        "image": "b.jpg",
         "price": 180.00
     },
     {
@@ -26,37 +26,37 @@
     {
         "name": "New Balance 990v5",
         "description": "Iconic running shoes known for their comfort and support.",
-        "image": "/online/e.jpeg",
+        "image": "e.jpeg",
         "price": 185.00
     },
     {
         "name": "Vans Old Skool",
         "description": "Classic skate shoes with a timeless design.",
-        "image": "/online/f.jpeg",
+        "image": "f.jpeg",
         "price": 60.00
     },
     {
         "name": "Rebook Classic Leather",
         "description": "Vintage-inspired sneakers with a soft leather upper.",
-        "image": "/online/g.jpeg",
+        "image": "g.jpeg",
         "price": 75.00
     },
     {
         "name": "ASICS Gel-Kayano 27",
         "description": "Supportive running shoes designed for long-distance comfort.",
-        "image": "/online/h.jpeg",
+        "image": "h.jpeg",
         "price": 160.00
     },
     {
         "name": "Hoka One One Bondi 7",
         "description": "Hoka One One Bondi 7",
-        "image": "/online/i.jpeg",
+        "image": "i.jpeg",
         "price": 160.00
     },
     {
         "name": "Dr. Martens 1460 Pascal",
         "description": "Iconic leather boots with a durable design and classic style.",
-        "image": "/online/j.jpeg",
+        "image": "j.jpeg",
         "price": 150.00
     }
 ]
