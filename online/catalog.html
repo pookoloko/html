@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JCD Online Catalog Shoes</title>
+    <title>JCD Online Shoes Catalog</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
@@ -31,19 +31,18 @@
         }
 
         .product-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            display: flex; /* Change to flex to arrange products horizontally */
+            overflow-x: auto; /* Allow horizontal scrolling if needed */
+            padding: 10px;
         }
 
         .product {
-            width: 23%;
-            margin-bottom: 20px;
+            width: 200px; /* Set a fixed width for each product */
+            margin-right: 20px; /* Space between products */
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             padding: 15px;
-            text-align: center;
         }
 
         .product img {
@@ -68,7 +67,7 @@
 
         .product .price {
             font-weight: bold;
-            color: # 333;
+            color: #333; /* Removed the space before #333 */
         }
 
         footer {
@@ -80,7 +79,21 @@
         }
 
         footer span {
-            font-size: 1.2rem;
+            font-size: 0.9rem;
+            color: #fff;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .product {
+                width: 150px; /* Adjust width for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product {
+                width: 120px; /* Further adjust for mobile */
+            }
         }
     </style>
 </head>
@@ -89,6 +102,9 @@
         <h1>Online Shoes</h1>
     </header>
     <main id="main">
+        <div class="product-container" id="product-container">
+            <!-- Product cards will be injected here -->
+        </div>
     </main>
     <footer>
         <span>designed by Shawn</span>
@@ -98,7 +114,7 @@
         fetch('products.json')
             .then(response => response.json())
             .then(data => {
-                const main = document.getElementById('main');
+                const productContainer = document.getElementById('product-container');
                 data.forEach(product => {
                     const productHTML = `
                         <div class="product">
@@ -108,11 +124,10 @@
                             <p class="price">$${product.price}</p>
                         </div>
                     `;
-                    main.innerHTML += productHTML;
+                    productContainer.innerHTML += productHTML; // Append to the product container
                 });
             })
             .catch(error => console.error('Error:', error));
     </script>
 </body>
 </html>
-
